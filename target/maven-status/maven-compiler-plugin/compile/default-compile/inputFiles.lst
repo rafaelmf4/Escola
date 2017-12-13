@@ -1,0 +1,14 @@
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\controller\CursoController.java
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\controller\CursoJpaController.java
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\controller\util\PaginationHelper.java
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\entity\Aluno.java
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\entity\Curso.java
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\controller\util\JsfUtil.java
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\controller\exceptions\IllegalOrphanException.java
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\controller\AlunoController.java
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\controller\CursoFacade.java
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\controller\exceptions\NonexistentEntityException.java
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\controller\AlunoFacade.java
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\controller\exceptions\RollbackFailureException.java
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\controller\AbstractFacade.java
+C:\Users\Rafael\Documents\NetBeansProjects\Escola\src\main\java\com\school\escola\controller\exceptions\PreexistingEntityException.java

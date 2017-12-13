@@ -1,0 +1,13 @@
+com\school\escola\controller\exceptions\IllegalOrphanException.class
+com\school\escola\controller\AbstractFacade.class
+com\school\escola\controller\exceptions\RollbackFailureException.class
+com\school\escola\entity\Curso_.class
+com\school\escola\controller\CursoJpaController.class
+com\school\escola\controller\util\JsfUtil.class
+com\school\escola\controller\util\JsfUtil$PersistAction.class
+com\school\escola\controller\CursoController.class
+com\school\escola\controller\exceptions\NonexistentEntityException.class
+com\school\escola\controller\exceptions\PreexistingEntityException.class
+com\school\escola\controller\CursoFacade.class
+com\school\escola\entity\Curso.class
+com\school\escola\controller\CursoController$CursoControllerConverter.class

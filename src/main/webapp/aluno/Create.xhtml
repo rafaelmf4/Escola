@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="AlunoCreateDlg" widgetVar="AlunoCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateAlunoTitle}">
+            <h:form id="AlunoCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{alunoController.selected != null}">
+
+                        <p:outputLabel value="#{bundle.CreateAlunoLabel_id}" for="id" />
+                        <p:inputText id="id" value="#{alunoController.selected.id}" title="#{bundle.CreateAlunoTitle_id}" disabled="true"/>
+
+                        <p:outputLabel value="#{bundle.CreateAlunoLabel_nome}" for="nome" />
+                        <p:inputText id="nome" value="#{alunoController.selected.nome}" title="#{bundle.CreateAlunoTitle_nome}" required="true" requiredMessage="#{bundle.CreateAlunoRequiredMessage_nome}"/>
+
+                        <p:outputLabel value="#{bundle.CreateAlunoLabel_dataNascimento}" for="dataNascimento" />
+                        <p:calendar id="dataNascimento" pattern="MM/dd/yyyy" value="#{alunoController.selected.dataNascimento}" title="#{bundle.EditAlunoTitle_dataNascimento}" required="true" requiredMessage="#{bundle.EditAlunoRequiredMessage_dataNascimento}" showOn="button"/>
+
+                        <p:outputLabel value="#{bundle.CreateAlunoLabel_sexo}" for="sexo" />
+                        <p:selectOneMenu id="sexo" value="#{alunoController.selected.sexo}" required="true" requiredMessage="#{bundle.EditAlunoRequiredMessage_sexo}">
+                            <f:selectItem itemLabel="Selecionar" itemValue=""/>
+                            <f:selectItem itemLabel="Masculino" itemValue="m"/>
+                            <f:selectItem itemLabel="Feminino" itemValue="f" />
+                        </p:selectOneMenu>
+
+                        <p:outputLabel value="#{bundle.CreateAlunoLabel_curso}" for="curso" />
+                        <p:selectOneMenu id="curso" value="#{alunoController.selected.curso}" required="true" requiredMessage="#{bundle.EditAlunoRequiredMessage_curso}">
+                            <f:selectItems value="#{cursoController.itemsAvailableSelectOne}"
+                                           var="cursoItem"
+                                           itemLabel="#{cursoItem.nome}"
+                                           itemValue="#{cursoItem}"/>
+                        </p:selectOneMenu>
+
+                        <p:outputLabel value="#{bundle.CreateAlunoLabel_nota}" for="nota" />
+                        <p:inputText id="nota" value="#{alunoController.selected.nota}" title="#{bundle.CreateAlunoTitle_nota}" />
+
+
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{alunoController.create}" value="#{bundle.Save}" update="display,:AlunoListForm:datalist,:growl" oncomplete="handleSubmit(args,'AlunoCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="AlunoCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
